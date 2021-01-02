@@ -8,6 +8,10 @@
     "jsx": "react",
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "types": [
+      "node",
+    ],
+    "declaration": true,
     "lib": [
       "ES2017",
       "DOM"
