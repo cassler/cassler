@@ -1,8 +1,9 @@
 {
   "name": "@cassler/hooks",
   "version": "1.2.6",
-  "main": "src/index",
-  "types": "src/index",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -13,11 +14,11 @@
     "url": "git+https://github.com/cassler/cassler.git"
   },
   "files": [
-    "dist"
+    "lib/"
   ],
   "scripts": {
     "build": "yarn run clean && yarn run compile",
-    "clean": "rimraf -rf ./dist",
+    "clean": "rimraf -rf ./lib",
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
     "test": "yarn run build"
