@@ -1,4 +1,11 @@
-### Hi there 👋
+### ✨ Making neato internet magic since 1999. ✨
+
+Hi there 👋 My name is Darin Cassler. I build handcrafted software and web solutions so you don't just work smarter - you work less. Small, bespoke products that your team, your customers or your audience will actually love.
+
+- 🌱 I call [darin.co](https://darin.co) my home on the web.
+- Check out my [NPM Packages](https://www.npmjs.com/~cassler)
+- Here's a [MineSweeper clone](https://mono-next-demo.vercel.app/about) I made one afternoon.
+
 
 <!--
 **cassler/cassler** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
