@@ -1,3 +1,27 @@
+import wheel from "open-color";
+import Color from "color";
+
+console.log(wheel);
+
+export const themeA = (color: Color) => {
+  const hue = Color(color);
+  return {
+    base: color,
+    red: hue.red(),
+    blue: hue.blue(),
+    green: hue.green(),
+    luminosity: hue.luminosity(),
+    ansi: hue.ansi256().object(),
+    hsl: hue.hsl(),
+    rgb: hue.rgb(),
+    bright: hue.lightness(60).rgb(),
+    mid: hue.lightness(50).rgb(),
+    low: hue.lightness(10).rgb(),
+  };
+};
+
+console.log(themeA(wheel.blue[3]));
+
 export const colors = {
   white: "#ffffff",
   black: "#000000",

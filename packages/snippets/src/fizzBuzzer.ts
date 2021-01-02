@@ -23,14 +23,3 @@ export function fizzBuzzer(length: number, intervals: FBInterval[]): String[] {
 }
 
 export default fizzBuzzer;
-
-let myIntervals: FBInterval[] = [
-  [3, "fizz"],
-  [4, "dip"],
-  [5, "buzz"],
-  [7, "went"],
-  [11, "home"],
-];
-let sample = fizzBuzzer(100, myIntervals);
-
-console.table(sample);

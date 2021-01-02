@@ -1,4 +1,3 @@
-
 const defaultMapPropsToArgs = (props) => [props];
 
 const createRenderProp = (hook, mapPropsToArgs = defaultMapPropsToArgs) => {

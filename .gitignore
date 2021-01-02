@@ -1,5 +1,7 @@
 node_modules
 dist
+lib
+esm
 results
 .nyc_output
 .DS_Store
