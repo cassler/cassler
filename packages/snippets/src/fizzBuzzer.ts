@@ -14,7 +14,7 @@ export type FBInterval = [number, string];
 
 export function fizzBuzzer(length: number, intervals: FBInterval[]): String[] {
   return Array.from(new Array(length)).map((u, i) => {
-    let str = "";
+    let str = "" + u;
     intervals.map((inter) => {
       if (i % inter[0] === 0) str += inter[1];
     });
