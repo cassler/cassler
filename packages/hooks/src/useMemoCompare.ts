@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-export function useMemoCompare(next, compare) {
+export default function useMemoCompare(next, compare) {
   // Ref for storing previous value
   const previousRef = useRef();
   const previous = previousRef.current;

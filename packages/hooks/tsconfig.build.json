@@ -1,23 +1,36 @@
 {
   "extends": "../../tsconfig.build.json",
   "compilerOptions": {
-    "outDir": "./dist",
+    "target": "es5",
     "module": "commonjs",
-    "target": "es2017",
-    "sourceMap": true,
+    "moduleResolution": "node",
     "jsx": "react",
+    "declaration": true,
+    "pretty": true,
+    "rootDir": "src",
+    "sourceMap": false,
+    "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "lib",
     "types": [
       "node",
     ],
-    "declaration": true,
+    "importHelpers": true,
     "lib": [
-      "ES2017",
-      "DOM"
-    ]
+      "es2018",
+      "dom"
+    ],
   },
-  "include": [
-    "src/**/*"
+  "exclude": [
+    "node_modules",
+    "lib",
+    "esm",
+    "tests",
+    "stories"
   ]
 }

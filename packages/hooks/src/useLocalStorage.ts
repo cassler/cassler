@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export type LocalStorageHook<T> = [T, (value: T | ((val: T) => T)) => void];
 export default function useLocalStorage<T>(

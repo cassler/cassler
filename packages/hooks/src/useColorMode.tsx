@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, JSX } from "react";
+import React, { useEffect, useContext } from "react";
 import useDarkMode, { HookStringBool } from "./useDarkMode";
 import useLocalStorage from "./useLocalStorage";
 import useMedia from "./useMedia";
