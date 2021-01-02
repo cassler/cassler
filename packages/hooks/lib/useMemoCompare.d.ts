@@ -1,1 +1,1 @@
-export declare function useMemoCompare(next: any, compare: any): any;
+export default function useMemoCompare(next: any, compare: any): any;

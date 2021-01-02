@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useMemoCompare = void 0;
 var react_1 = require("react");
 function useMemoCompare(next, compare) {
     // Ref for storing previous value
@@ -20,4 +19,4 @@ function useMemoCompare(next, compare) {
     // Finally, if equal then return the previous value
     return isEqual ? previous : next;
 }
-exports.useMemoCompare = useMemoCompare;
+exports.default = useMemoCompare;
