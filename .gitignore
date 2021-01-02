@@ -5,3 +5,4 @@ results
 .DS_Store
 *.tsbuildinfo
 .vscode/
+lerna-debug.log
