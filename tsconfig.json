@@ -16,9 +16,6 @@
     "jsx": "react",
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "types": [
-      "@emotion/react"
-    ]
   },
   "exclude": [
     "node_modules",
