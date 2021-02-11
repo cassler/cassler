@@ -20,7 +20,7 @@ export const Primary = Template.bind({});
 Primary.args = { background: "#ff0", label: "Button" };
 
 export const Secondary = Template.bind({});
-Secondary.args = { ...Primary.args, label: "😄👍😍💯" };
+Secondary.args = { ...Primary.args, label: "My dark button", dark: true };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = { ...Primary.args, label: "📚📕📈🤓" };
