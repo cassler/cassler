@@ -1,52 +1,92 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/react";
+import { jsx, css } from "@emotion/react";
+import React from "react";
 
-const resetStyle = {
-  padding: "0.2em 0",
-  margin: 0,
-  lineHeight: "1.2em",
-  color: "#9cf",
-  fontFamily:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+const base = css`
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.25rem 0;
+  margin: 0;
+  line-height: 1.5em;
+  letter-spacing: -0.01666em;
+  color: #ddd;
+`;
+
+const caption = css`
+  line-height: 1.333em;
+  letter-spacing: -0.01666em;
+  color: #999;
+`;
+const darkStyle = css`
+  color: #333;
+`;
+const t = (ratio: number) => css`
+  font-size: ${ratio}rem;
+`;
+
+interface TypePropsI {
+  dark?: boolean;
+}
+export const Heading1: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return <h1 css={[base, dark && darkStyle, t(2.2)]}>{props.children}</h1>;
 };
 
-export function Heading1(props) {
-  return (
-    <div
-      css={{
-        fontSize: 32,
-        fontWeight: 700,
-        ...resetStyle,
-      }}
-    >
-      {props.children}
-    </div>
-  );
-}
+export const Heading2: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return <h2 css={[base, dark && darkStyle, t(1.6)]}>{props.children}</h2>;
+};
+export const Heading3: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return <h3 css={[base, dark && darkStyle, t(1.3)]}>{props.children}</h3>;
+};
 
-export function Heading2(props) {
-  return (
+export const Heading4: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return <h4 css={[base, dark && darkStyle, t(1.1)]}>{props.children}</h4>;
+};
+
+export const Para: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return <p css={[base, dark && darkStyle, t(0.8)]}>{props.children}</p>;
+};
+
+export const Spacer: React.FC = () => (
+  <div
+    css={css`
+      height: 0.5rem;
+    `}
+  />
+);
+
+export const Divider: React.FC = () => (
+  <React.Fragment>
+    <Spacer />
     <div
-      css={{
-        fontSize: 22,
-        fontWeight: 700,
-        ...resetStyle,
-      }}
+      css={css`
+        height: 0;
+        margin: 0.25rem 0;
+        border-top: 1px solid rgba(120, 120, 120, 0.5);
+      `}
+    />
+    <Spacer />
+  </React.Fragment>
+);
+export const Caption: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  return (
+    <p
+      css={[
+        base,
+        caption,
+        dark &&
+          css`
+            color: #888;
+          `,
+        t(0.7),
+      ]}
     >
       {props.children}
-    </div>
+    </p>
   );
-}
-export function Heading3(props) {
-  return (
-    <div
-      css={{
-        fontSize: 17,
-        fontWeight: 700,
-        ...resetStyle,
-      }}
-    >
-      {props.children}
-    </div>
-  );
-}
+};
