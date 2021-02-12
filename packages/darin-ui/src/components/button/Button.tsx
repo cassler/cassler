@@ -1,5 +1,5 @@
 import * as React from "react";
-import Color from "color";
+import { getShades } from "../../_util";
 
 interface IButtonProps {
   label: string | React.ReactElement;
@@ -7,29 +7,12 @@ interface IButtonProps {
   dark?: boolean;
 }
 
-function getShades(hue: string) {
-  const color = Color(hue);
-  return {
-    light: {
-      bg: color.lightness(92).hex(),
-      accent: color.lightness(40).hex(),
-      base: color.lightness(25).hex(),
-    },
-    dark: {
-      bg: color.lightness(18).hex(),
-      accent: color.lightness(60).hex(),
-      base: color.lightness(75).hex(),
-    },
-  };
-}
-
 const ButtonZ: React.FunctionComponent<IButtonProps> = ({
   label,
   background = "#d3d3d3",
   dark,
 }) => {
-  const shades = getShades(background);
-  const { bg, accent, base } = dark ? shades.dark : shades.light;
+  const { bg, accent, base } = getShades(background, dark);
 
   const css: React.CSSProperties = {
     backgroundColor: bg || "inherit",

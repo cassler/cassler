@@ -10,6 +10,7 @@ export default {
   argTypes: {
     background: { control: "color" },
     color: { control: "color" },
+    dark: { control: "boolean" },
   },
 };
 
@@ -17,7 +18,7 @@ export default {
 const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { background: "#ff0", label: "Button" };
+Primary.args = { label: "Button" };
 
 export const Secondary = Template.bind({});
 Secondary.args = { ...Primary.args, label: "My dark button", dark: true };

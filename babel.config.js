@@ -1,4 +1,11 @@
 module.exports = {
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-  plugins: ["@emotion/babel-plugin", "babel-plugin-styled-components"],
+  presets: [
+    "@babel/preset-env",
+    // [
+    //   "@babel/preset-react",
+    //   { runtime: "automatic", importSource: "@emotion/react" },
+    // ],
+    "@emotion/babel-preset-css-prop",
+  ],
+  plugins: ["@emotion/babel-plugin"],
 };

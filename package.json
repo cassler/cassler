@@ -16,12 +16,17 @@
     "next:build": "lerna run --scope @cassler/nextjs build",
     "next": "lerna run --scope @cassler/nextjs dev"
   },
+  "dependencies": {
+    "@emotion/babel-plugin": "^11.2.0"
+  },
   "devDependencies": {
     "@babel/core": "7.11.6",
     "@babel/preset-env": "7.11.5",
     "@babel/preset-react": "7.10.4",
     "@cassler/eslint-config-tsx": "~7.1.8",
-    "@emotion/babel-plugin": "^11.2.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
     "@storybook/addon-docs": "6.1.17",
     "@storybook/addon-essentials": "^6.1.17",
     "@storybook/preset-create-react-app": "3.1.5",
@@ -31,6 +36,7 @@
     "babel-jest": "26.3.0",
     "babel-loader": "8.1.0",
     "babel-plugin-styled-components": "1.11.1",
+    "babel-preset-react-app": "^10.0.0",
     "doctoc": "~2.0.0",
     "eslint": "~7.16.0",
     "eslint-config-airbnb": "^18.2.0",
@@ -38,6 +44,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-test-renderer": "16.13.1",
+    "styled-components": "^5.2.1",
     "stylelint": "13.7.0",
     "stylelint-config-get-off-my-lawn": "2.0.0",
     "stylelint-config-styled-components": "0.1.1",
