@@ -40,12 +40,12 @@ export default {
 // We create a “template” of how args map to rendering
 const Template = (args) => (
   <>
-    <Heading1 {...args}>{args.text}</Heading1>
-    <Heading2 {...args}>Heading2</Heading2>
-    <Heading3 {...args}>Third Heading - {args.text}</Heading3>
+    <Heading1 dark={args.dark}>{args.text}</Heading1>
+    <Heading2>Heading2</Heading2>
+    <Heading3>Third Heading - {args.text}</Heading3>
 
-    <Para {...args}>{data.txts[2]}</Para>
-    <Para {...args}>{data.txt}</Para>
+    <Para>{data.txts[2]}</Para>
+    <Para>{data.txt}</Para>
     <Divider />
     <Heading4 {...args}>{args.text}</Heading4>
     <Spacer />
@@ -57,16 +57,21 @@ const Template = (args) => (
   </>
 );
 
-export const Main = Template.bind({});
-Main.args = {
+export const DarkMode = Template.bind({});
+DarkMode.args = {
   text: "Dark  Mode",
+  label: "Dark Mode Sample",
   dark: true,
-  parameters: { background: "dark" },
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const NormalMode = Template.bind({});
+NormalMode.args = {
   text: "Normal Mode",
+  label: "Normal Sample",
   dark: false,
-  parameters: { background: "light" },
 };
+
+export const H1Default = (args) => <Heading1 {...args}>Heading1</Heading1>;
+export const H1Dark = () => <Heading1 dark>Heading1</Heading1>;
+export const H2 = (args) => <Heading2 {...args}>Heading Two</Heading2>;
+export const H3 = (args) => <Heading3 {...args}>Heading Three</Heading3>;
