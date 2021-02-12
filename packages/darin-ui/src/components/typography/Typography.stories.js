@@ -8,6 +8,7 @@ import {
   Heading2,
   Heading3,
   Heading4,
+  Heading5,
   Para,
   Caption,
   Spacer,
@@ -16,10 +17,23 @@ import {
 
 export default {
   component: Heading1,
-  title: "Design System/H1",
+  title: "Design System/Typography",
   argTypes: {
     text: { control: "text" },
     dark: { control: "boolean" },
+  },
+  parameters: {
+    background: "light",
+  },
+  subcomponents: {
+    Heading2,
+    Heading3,
+    Heading4,
+    Heading5,
+    Para,
+    Caption,
+    Spacer,
+    Divider,
   },
 };
 
@@ -27,22 +41,32 @@ export default {
 const Template = (args) => (
   <>
     <Heading1 {...args}>{args.text}</Heading1>
-    <Heading2 {...args}>{args.text}</Heading2>
-    <Heading3 {...args}>{args.text}</Heading3>
+    <Heading2 {...args}>Heading2</Heading2>
+    <Heading3 {...args}>Third Heading - {args.text}</Heading3>
 
     <Para {...args}>{data.txts[2]}</Para>
     <Para {...args}>{data.txt}</Para>
     <Divider />
     <Heading4 {...args}>{args.text}</Heading4>
+    <Spacer />
+    <Heading5 {...args}>{args.text}</Heading5>
     <Caption {...args}>{data.txts[0]}</Caption>
     <Spacer />
-    <Heading4 {...args}>{args.text}</Heading4>
+    <Heading5 {...args}>{args.text}</Heading5>
     <Caption {...args}>{data.txts[0]}</Caption>
   </>
 );
 
 export const Main = Template.bind({});
-Main.args = { text: "My Heading", dark: true };
+Main.args = {
+  text: "Dark  Mode",
+  dark: true,
+  parameters: { background: "dark" },
+};
 
 export const Primary = Template.bind({});
-Primary.args = { text: "Normal Mode", dark: false };
+Primary.args = {
+  text: "Normal Mode",
+  dark: false,
+  parameters: { background: "light" },
+};

@@ -24,7 +24,7 @@ export const decorators = [withThemeProvider];
 
 export const parameters = {
   backgrounds: {
-    default: "dark",
+    default: "light",
     values: [
       {
         name: "twitter",

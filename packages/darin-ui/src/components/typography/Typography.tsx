@@ -46,6 +46,17 @@ export const Heading4: React.FC<TypePropsI> = (props) => {
   return <h4 css={[base, dark && darkStyle, t(1.1)]}>{props.children}</h4>;
 };
 
+export const Heading5: React.FC<TypePropsI> = (props) => {
+  const { dark } = props;
+  const resize = css`
+    padding: 0.25rem 0 0;
+    color: rgba(100, 100, 100, 0.9);
+  `;
+  return (
+    <h4 css={[base, dark && darkStyle, resize, t(0.9)]}>{props.children}</h4>
+  );
+};
+
 export const Para: React.FC<TypePropsI> = (props) => {
   const { dark } = props;
   return <p css={[base, dark && darkStyle, t(0.8)]}>{props.children}</p>;
@@ -66,7 +77,7 @@ export const Divider: React.FC = () => (
       css={css`
         height: 0;
         margin: 0.25rem 0;
-        border-top: 1px solid rgba(120, 120, 120, 0.5);
+        border-top: 1px solid rgba(120, 120, 120, 0.3);
       `}
     />
     <Spacer />
