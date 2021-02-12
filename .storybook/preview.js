@@ -1,11 +1,18 @@
+import themes from '../packages/darin-ui/src/themes';
+import { ThemeProvider } from '@emotion/react';
+import { withThemesProvider } from "themeprovider-storybook";
 
-import React from "react";
+
+export const decorators = [
+  withThemesProvider(themes, {
+    CustomThemeProvider: ThemeProvider
+  })
+];
 
 
 export const parameters = {
   layout: 'centered',
   backgrounds: {
-    default: "light",
     values: [
       {
         name: "twitter",

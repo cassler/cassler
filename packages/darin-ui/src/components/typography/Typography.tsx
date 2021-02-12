@@ -1,55 +1,73 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/react";
-import React from "react";
+import { jsx, css, useTheme } from '@emotion/react'
+import React from 'react';
 
-const base = (dark?: boolean) => css`
+const base = css`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0.25rem 0;
   margin: 0;
   line-height: 1.5em;
   letter-spacing: -0.01666em;
-  color: ${dark ? "#ddd" : "#333"};
 `;
 
-const caption = (dark?: boolean) => css`
-  line-height: 1.333em;
-  letter-spacing: -0.01666em;
-  color: ${dark ? "#ddd" : "#333"};
-`;
-
-const t = (ratio: number) => css`
-  font-size: ${ratio}rem;
-`;
 
 interface TypePropsI {
-  dark?: boolean;
+
 }
-export const Heading1: React.FC<TypePropsI> = ({ children, dark }) => (
-  <h1 css={[base(dark), t(2.2)]}>{children}</h1>
-);
-
-export const Heading2: React.FC<TypePropsI> = ({ children, dark }) => (
-  <h2 css={[base(dark), t(1.6)]}>{children}</h2>
-);
-export const Heading3: React.FC<TypePropsI> = ({ children, dark }) => (
-  <h3 css={[base(dark), t(1.3)]}>{children}</h3>
-);
-
-export const Heading4: React.FC<TypePropsI> = ({ children, dark }) => (
-  <h4 css={[base(dark), t(1.1)]}>{children}</h4>
-);
-
-export const Heading5: React.FC<TypePropsI> = ({ children, dark }) => {
-  const resize = css`
-    padding: 0.25rem 0 0;
-  `;
-  return <h4 css={[base(dark), resize, t(0.9)]}>{children}</h4>;
+export const Heading1: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <h1 css={css`
+    color: ${bodyText};
+    font-size: 2.2rem;
+    ${base}
+  `}>{children}</h1>
 };
 
-export const Para: React.FC<TypePropsI> = ({ children, dark }) => (
-  <p css={[base(dark), t(0.8)]}>{children}</p>
-);
+export const Heading2: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <h2 css={css`
+    color: ${bodyText};
+    font-size: 2.2rem;
+    ${base}
+  `}>{children}</h2>
+};
+
+export const Heading3: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <h3 css={css`
+    color: ${bodyText};
+    font-size: 1.6rem;
+    ${base}
+  `}>{children}</h3>
+};
+
+export const Heading4: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <h4 css={css`
+    color: ${bodyText};
+    font-size: 1.2rem;
+    ${base}
+  `}>{children}</h4>
+};
+
+export const Heading5: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <h5 css={css`
+    color: ${bodyText};
+    font-size: 1rem;
+    ${base}
+  `}>{children}</h5>
+};
+
+export const Para: React.FC<TypePropsI> = ({ children }) => {
+  const { bodyText } = useTheme();
+  return <p css={css`
+    color: ${bodyText};
+    font-size: 1rem;
+    ${base}
+  `}>{children}</p>
+};
 
 export const Spacer: React.FC = () => (
   <div
@@ -73,6 +91,9 @@ export const Divider: React.FC = () => (
   </React.Fragment>
 );
 export const Caption: React.FC<TypePropsI> = (props) => {
-  const { dark } = props;
-  return <p css={[base(dark), caption(dark), t(0.7)]}>{props.children}</p>;
+  const { captionText }  = useTheme();
+  return <p css={css`
+    color: ${captionText};
+    ${base}
+  `}>{props.children}</p>;
 };
