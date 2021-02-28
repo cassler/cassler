@@ -1,6 +1,6 @@
 {
   "name": "@cassler/eslint-config-ts",
-  "version": "7.1.8",
+  "version": "8.0.4",
   "publishConfig": {
     "access": "public"
   },
@@ -10,7 +10,7 @@
     "config",
     "typescript"
   ],
-  "author": "Andrei Picus <cassler@users.noreply.github.com>",
+  "author": "Darin Cassler <cassler@users.noreply.github.com>",
   "license": "MIT",
   "main": "index.js",
   "repository": {
@@ -21,9 +21,10 @@
     "test": "../../test.sh mugshot ts"
   },
   "dependencies": {
-    "@cassler/eslint-config-base": "^6.1.8",
-    "@typescript-eslint/eslint-plugin": "~3.10.0",
-    "@typescript-eslint/parser": "~3.10.0"
+    "@cassler/eslint-config-base": "^7.1.1",
+    "@typescript-eslint/eslint-plugin": "~4.15.0",
+    "@typescript-eslint/parser": "~4.15.0",
+    "eslint-import-resolver-typescript": "~2.4.0"
   },
   "peerDependencies": {
     "eslint": "^7.0.0"

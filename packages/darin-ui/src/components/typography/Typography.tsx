@@ -28,7 +28,7 @@ export const Heading2: React.FC<TypePropsI> = ({ children }) => {
   const { bodyText } = useTheme();
   return <h2 css={css`
     color: ${bodyText};
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     ${base}
   `}>{children}</h2>
 };
@@ -37,7 +37,7 @@ export const Heading3: React.FC<TypePropsI> = ({ children }) => {
   const { bodyText } = useTheme();
   return <h3 css={css`
     color: ${bodyText};
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     ${base}
   `}>{children}</h3>
 };
@@ -46,7 +46,7 @@ export const Heading4: React.FC<TypePropsI> = ({ children }) => {
   const { bodyText } = useTheme();
   return <h4 css={css`
     color: ${bodyText};
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     ${base}
   `}>{children}</h4>
 };
@@ -55,7 +55,7 @@ export const Heading5: React.FC<TypePropsI> = ({ children }) => {
   const { bodyText } = useTheme();
   return <h5 css={css`
     color: ${bodyText};
-    font-size: 1rem;
+    font-size: 0.9rem;
     ${base}
   `}>{children}</h5>
 };
@@ -64,7 +64,7 @@ export const Para: React.FC<TypePropsI> = ({ children }) => {
   const { bodyText } = useTheme();
   return <p css={css`
     color: ${bodyText};
-    font-size: 1rem;
+    font-size: 0.8rem;
     ${base}
   `}>{children}</p>
 };
@@ -94,6 +94,7 @@ export const Caption: React.FC<TypePropsI> = (props) => {
   const { captionText }  = useTheme();
   return <p css={css`
     color: ${captionText};
+    font-size: 0.8em;
     ${base}
   `}>{props.children}</p>;
 };
