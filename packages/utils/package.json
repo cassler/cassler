@@ -7,6 +7,9 @@
   "scripts": {
     "lint": "eslint *.ts*"
   },
+  "files": [
+    "colors.json"
+  ],
   "devDependencies": {
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",

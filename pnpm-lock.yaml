@@ -20,25 +20,25 @@ importers:
     specifiers:
       '@babel/core': ^7.0.0
       '@types/node': ^17.0.12
-      '@types/react': 17.0.48
+      '@types/react': '18'
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       next: 12.2.3
       next-transpile-modules: 9.0.0
-      react: 17.0.2
-      react-dom: 17.0.2
+      react: '18'
+      react-dom: '18'
       tsconfig: workspace:*
       typescript: ^4.5.3
       ui: workspace:*
     dependencies:
-      next: 12.2.3_gdjom6r726p3grwsawiv52ijca
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      next: 12.2.3_twoewwu6sg7cdf3ao6njtbftne
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
       ui: link:../../packages/ui
     devDependencies:
       '@babel/core': 7.18.10
       '@types/node': 17.0.45
-      '@types/react': 17.0.48
+      '@types/react': 18.0.17
       eslint: 7.32.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       next-transpile-modules: 9.0.0
@@ -49,27 +49,27 @@ importers:
     specifiers:
       '@babel/core': ^7.0.0
       '@types/node': ^17.0.12
-      '@types/react': 17.0.48
+      '@types/react': '18'
       eslint: 7.32.0
       eslint-config-custom: workspace:*
       next: 12.2.3
       next-transpile-modules: 9.0.0
-      react: 17.0.2
-      react-dom: 17.0.2
+      react: '18'
+      react-dom: '18'
       tsconfig: workspace:*
       typescript: ^4.5.3
       ui: workspace:*
       utils: workspace:*
     dependencies:
-      next: 12.2.3_gdjom6r726p3grwsawiv52ijca
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      next: 12.2.3_twoewwu6sg7cdf3ao6njtbftne
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
       ui: link:../../packages/ui
       utils: link:../../packages/utils
     devDependencies:
       '@babel/core': 7.18.10
       '@types/node': 17.0.45
-      '@types/react': 17.0.48
+      '@types/react': 18.0.17
       eslint: 7.32.0
       eslint-config-custom: link:../../packages/eslint-config-custom
       next-transpile-modules: 9.0.0
@@ -98,19 +98,19 @@ importers:
 
   packages/ui:
     specifiers:
-      '@types/react': ^17.0.37
-      '@types/react-dom': ^17.0.11
+      '@types/react': '18'
+      '@types/react-dom': '18'
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
-      react: ^17.0.2
+      react: '18'
       tsconfig: workspace:*
       typescript: ^4.5.2
     devDependencies:
-      '@types/react': 17.0.48
-      '@types/react-dom': 17.0.17
+      '@types/react': 18.0.17
+      '@types/react-dom': 18.0.6
       eslint: 7.32.0
       eslint-config-custom: link:../eslint-config-custom
-      react: 17.0.2
+      react: 18.2.0
       tsconfig: link:../tsconfig
       typescript: 4.7.4
 
@@ -593,8 +593,22 @@ packages:
       '@types/react': 17.0.48
     dev: true
 
+  /@types/react-dom/18.0.6:
+    resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
+    dependencies:
+      '@types/react': 18.0.17
+    dev: true
+
   /@types/react/17.0.48:
     resolution: {integrity: sha512-zJ6IYlJ8cYYxiJfUaZOQee4lh99mFihBoqkOSEGV+dFi9leROW6+PgstzQ+w3gWTnUfskALtQPGHK6dYmPj+2A==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.0
+    dev: true
+
+  /@types/react/18.0.17:
+    resolution: {integrity: sha512-38ETy4tL+rn4uQQi7mB81G7V1g0u2ryquNmsVIOKUAEIDK+3CUjZ6rSRpdvS99dNBnkLFL83qfmtLacGOTIhwQ==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -2069,7 +2083,7 @@ packages:
       escalade: 3.1.1
     dev: true
 
-  /next/12.2.3_gdjom6r726p3grwsawiv52ijca:
+  /next/12.2.3_twoewwu6sg7cdf3ao6njtbftne:
     resolution: {integrity: sha512-TA0tmSA6Dk6S6kfvCNbF7CWYW8468gZUxr/3/30z4KvAQbXnl2ASYZElVe7q/hBW/1F1ee0tSBlHa4/sn+ZIBw==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -2091,10 +2105,10 @@ packages:
       '@swc/helpers': 0.4.3
       caniuse-lite: 1.0.30001375
       postcss: 8.4.14
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      styled-jsx: 5.0.2_ogpt7jwnl7hws2znhmqhdzydta
-      use-sync-external-store: 1.2.0_react@17.0.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      styled-jsx: 5.0.2_byq7oc57qftat37gkdlgphtura
+      use-sync-external-store: 1.2.0_react@18.2.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.2.3
       '@next/swc-android-arm64': 12.2.3
@@ -2272,15 +2286,14 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: false
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/18.2.0_react@18.2.0:
+    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.2.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 18.2.0
+      scheduler: 0.23.0
     dev: false
 
   /react-is/16.13.1:
@@ -2293,6 +2306,13 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: true
+
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
 
   /regenerator-runtime/0.13.9:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==}
@@ -2364,11 +2384,10 @@ packages:
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.23.0:
+    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /semver/6.3.0:
@@ -2481,7 +2500,7 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  /styled-jsx/5.0.2_ogpt7jwnl7hws2znhmqhdzydta:
+  /styled-jsx/5.0.2_byq7oc57qftat37gkdlgphtura:
     resolution: {integrity: sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -2495,7 +2514,7 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.18.10
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /supports-color/5.5.0:
@@ -2762,12 +2781,12 @@ packages:
     dependencies:
       punycode: 2.1.1
 
-  /use-sync-external-store/1.2.0_react@17.0.2:
+  /use-sync-external-store/1.2.0_react@18.2.0:
     resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 17.0.2
+      react: 18.2.0
     dev: false
 
   /v8-compile-cache/2.3.0:
