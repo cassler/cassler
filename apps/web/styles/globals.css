@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+main.app {
+  grid-template-columns: [left] 300px [body] 1fr;
+  grid-template-rows: [nav] 50px [masthead] 200px [content] 1fr [end];
+  min-height: 100vh;
+  transition: all 200ms;
+  &.simple {
+    grid-template-columns: [left] 0 [body] 1fr !important;
+  }
+}
+
+nav {
+  grid-column: left/body;
+  grid-row: nav
+}
+aside {
+  grid-column: left;
+  grid-row: masthead / end;
+}
+
+header {
+  grid-column: body;
+  grid-row: masthead;
+}
+
+article {
+  grid-column: body;
+  grid-row: content / end;
+}
