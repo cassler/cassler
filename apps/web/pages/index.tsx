@@ -8,11 +8,11 @@ export default function Web() {
       grid w-screen h-screen fixed bg-red-300
       ${simpleMode && 'simple'}
     `}>
-      <nav className="bg-green-500">
-        <button className='p-2 border bg-green-50' onClick={() => setSimpleMode(!simpleMode)}>Toggle</button>
+      <nav className="bg-green-500 flex items-center justify-center">
+        <button className='p-2 text-green-900 font-semibold tracking-tight border-2 border-green-300 rounded' onClick={() => setSimpleMode(!simpleMode)}>Toggle</button>
       </nav>
-      <header className='bg-orange-500'>ORANGE</header>
-      <aside className='sidebar bg-white'>WHITE</aside>
+      <header className='bg-orange-100'>ORANGE</header>
+      <aside className='sidebar bg-black'>WHITE</aside>
       <article className='bg-purple-700 overflow-y-scroll'>
         <div className='min-h-[2000px]'>Main Content</div>
       </article>
