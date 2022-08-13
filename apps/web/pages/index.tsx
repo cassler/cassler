@@ -1,5 +1,4 @@
-import React from "react";
-import { Button } from "ui";
+import React from 'react';
 
 export default function Web() {
   const [simpleMode, setSimpleMode] = React.useState(false);
@@ -9,7 +8,7 @@ export default function Web() {
       grid w-screen h-screen fixed bg-red-300
       ${simpleMode && 'simple'}
     `}>
-      <nav className='bg-green-500'>
+      <nav className="bg-green-500">
         <button className='p-2 border bg-green-50' onClick={() => setSimpleMode(!simpleMode)}>Toggle</button>
       </nav>
       <header className='bg-orange-500'>ORANGE</header>
